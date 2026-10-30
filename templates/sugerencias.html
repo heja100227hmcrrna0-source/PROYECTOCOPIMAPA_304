@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quejas y Sugerencias</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+<div class="menu">
+
+    <img src="{{ url_for('static', filename='img/COPIMAPA.png') }}"
+         class="logo">
+
+    <h1>QUEJAS Y SUGERENCIAS</h1>
+
+    <h2>COPI MAPA</h2>
+
+    <form>
+
+        <input
+            type="text"
+            placeholder="Nombre completo"
+            required>
+
+        <br><br>
+
+        <input
+            type="email"
+            placeholder="Correo electrónico"
+            required>
+
+        <br><br>
+
+        <textarea
+            placeholder="Escribe tu sugerencia o queja aquí..."
+            rows="6"
+            style="
+            width:100%;
+            padding:15px;
+            border-radius:15px;
+            border:2px solid #81D4FA;">
+        </textarea>
+
+        <br><br>
+
+        <button type="submit" class="btn-enviar">
+            📩 Enviar sugerencia
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/menu" class="btn-menu">
+        ⬅ Volver al menú
+    </a>
+
+</div>
+
+</body>
+</html>

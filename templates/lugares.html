@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lugares Turísticos</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+<div class="menu">
+
+    <img src="{{ url_for('static', filename='img/COPIMAPA.png') }}"
+         class="logo">
+
+    <h1>LUGARES TURÍSTICOS</h1>
+
+    <h2>SAN JOSÉ DEL RINCÓN</h2>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <h3>🦋 Santuario de la Mariposa Monarca</h3>
+            <p>Uno de los atractivos naturales más importantes de la región.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🌳 Presa Brockman</h3>
+            <p>Espacio ideal para actividades recreativas y convivencia familiar.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🏛️ Presidencia Municipal</h3>
+            <p>Centro administrativo y punto de referencia del municipio.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>⛪ Parroquia San José del Rincón</h3>
+            <p>Templo principal y patrimonio religioso de la comunidad.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🎭 Centro Ceremonial Mazahua</h3>
+            <p>Espacio cultural representativo de la identidad mazahua.</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <a href="/menu" class="btn-menu">
+        ⬅ Volver al menú
+    </a>
+
+</div>
+
+</body>
+</html>

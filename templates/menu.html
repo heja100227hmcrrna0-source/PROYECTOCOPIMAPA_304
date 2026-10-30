@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>COPI MAPA - Menú Principal</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+<div class="menu">
+
+    <img src="{{ url_for('static', filename='img/COPIMAPA.png') }}"
+         alt="Logo COPI MAPA"
+         class="logo">
+
+    <h1>COPI MAPA</h1>
+
+    <h2>SAN JOSÉ DEL RINCÓN</h2>
+
+    <div class="opciones-menu">
+
+        <a href="/mapa" class="btn-menu">
+            🗺️ Ver mapa
+        </a>
+
+        <a href="/lugares" class="btn-menu">
+            📍 Lugares turísticos
+        </a>
+
+        <a href="/acerca" class="btn-menu">
+            ℹ️ Acerca de COPI MAPA
+        </a>
+
+        <a href="/sugerencias" class="btn-menu">
+            💡 Sugerencias
+        </a>
+
+        <a href="/usuarios" class="btn-menu">
+            👤 Usuarios
+        </a>
+
+        <a href="/integrantes" class="btn-menu">
+            👥 Integrantes
+        </a>
+
+        <a href="/" class="btn-salir">
+            🚪 Cerrar sesión
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

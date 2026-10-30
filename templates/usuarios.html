@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios - COPI MAPA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+<div class="menu">
+
+    <img src="{{ url_for('static', filename='img/COPIMAPA.png') }}"
+         class="logo">
+
+    <h1>GESTIÓN DE USUARIOS</h1>
+
+    <h2>COPI MAPA</h2>
+
+    <table class="tabla-usuarios">
+
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Rol</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Administrador</td>
+            <td>Admin</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Invitado</td>
+            <td>Usuario</td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <a href="/menu" class="btn-menu">
+        ⬅ Volver al menú
+    </a>
+
+</div>
+
+</body>
+
+</html>

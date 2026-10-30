@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa - COPI MAPA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<div class="menu">
+
+    <img src="{{ url_for('static', filename='img/COPIMAPA.png') }}"
+         class="logo">
+
+    <h1>MAPA TURÍSTICO</h1>
+
+    <h2>SAN JOSÉ DEL RINCÓN</h2>
+
+    <div class="categorias">
+
+        <button>🏛️ Gobierno</button>
+
+        <button>⛪ Iglesia</button>
+
+        <button>🛒 Comercio</button>
+
+        <button>🌳 Turismo</button>
+
+    </div>
+
+    <input
+        type="text"
+        id="busqueda"
+        placeholder="Buscar lugar..."
+        style="
+        width:100%;
+        padding:12px;
+        border:2px solid #2196F3;
+        border-radius:10px;
+        margin-bottom:15px;">
+
+        <div id="mapa"></div>
+
+
+    <br>
+
+    <a href="/menu" class="btn-menu">
+        ⬅ Volver al menú
+    </a>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+var mapa = L.map('mapa').setView([19.661353, -100.151971], 16);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18
+}).addTo(mapa);
+
+/* Centro */
+
+L.marker([19.651, -100.135])
+.addTo(mapa)
+.bindPopup("<b>Centro de San José del Rincón</b>");
+
+/* Mariposa Monarca */
+
+L.marker([19.670, -100.210])
+.addTo(mapa)
+.bindPopup("<b>Santuario de la Mariposa Monarca</b>");
+
+/* Presa */
+
+L.marker([19.640, -100.050])
+.addTo(mapa)
+.bindPopup("<b>Presa Brockman</b>");
+
+/* Presidencia Municipal */
+
+/* Presidencia Municipal */
+
+L.marker([19.661353, -100.151971])
+.addTo(mapa)
+.bindPopup(`
+<h3>🏛️ Presidencia Municipal</h3>
+<p>Ayuntamiento de San José del Rincón.</p>
+<p>📍 Centro del municipio</p>
+`);
+
+/* Parroquia */
+
+L.marker([19.636, -100.145])
+.addTo(mapa)
+.bindPopup(`
+<h3>⛪ Parroquia San José del Rincón</h3>
+<p>Templo principal del municipio.</p>
+<p>📍 Plaza Principal</p>
+`);
+
+document.getElementById("busqueda").addEventListener("keyup", function() {
+
+    let texto = this.value.toLowerCase();
+
+    if(texto.includes("presidencia")){
+        mapa.setView([19.635, -100.146], 17);
+    }
+
+    if(texto.includes("iglesia")){
+        mapa.setView([19.636, -100.145], 17);
+    }
+
+    if(texto.includes("centro")){
+        mapa.setView([19.651, -100.135], 17);
+    }
+
+});
+
+</script>
+
+</body>
+</html>
